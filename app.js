@@ -3,7 +3,7 @@ const line = require("@line/bot-sdk");
 const config = require("./config");
 
 const handleReply = require("./controllers/reply");
-const handkeGreet = require("./controllers/greeting")
+const handleGreet = require("./controllers/greeting")
 
 const port = process.env.PORT || 4000;
 const app = express();

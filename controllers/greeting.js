@@ -3,10 +3,12 @@ const line = require("@line/bot-sdk");
 const client = new line.Client(config);
 
 handleGreet = event => {  
-  return client.multicast([process.env.jackID], {
+  let test =  client.multicast([process.env.jackID], {
     type: "text",
     text: "Hello this is from cron job"
   });
+  
+  return test
 };
 
 module.exports = handleGreet;

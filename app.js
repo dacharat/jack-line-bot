@@ -14,7 +14,7 @@ app.post("/webhook", line.middleware(config), (req, res) => {
   );
 });
 
-app.post("/webhook/greet", line.middleware(config), (req, res) => {
+app.post("/webhook/greet", line.middleware(config), (req, res) => {    
   Promise.all(req.body.events.map(handleGreet)).then(result =>
     res.json(result)
   );

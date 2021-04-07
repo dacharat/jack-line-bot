@@ -21,11 +21,6 @@ handleReply = (event) => {
       type: "text",
       text: "ไอควาย" + name,
     });
-  } else if (event.message.text.includes("stat")) {
-    return client.replyMessage(event.replyToken, {
-      type: "text",
-      text: JSON.stringify(event),
-    });
   }
 
   if (event.source.type === "group") {

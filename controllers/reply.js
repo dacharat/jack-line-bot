@@ -24,7 +24,7 @@ handleReply = (event) => {
   } else if (event.message.text.includes("stat")) {
     return client.replyMessage(event.replyToken, {
       type: "text",
-      text: event,
+      text: JSON.stringify(event),
     });
   }
 
